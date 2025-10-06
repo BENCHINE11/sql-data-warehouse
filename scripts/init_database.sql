@@ -11,6 +11,7 @@
 USE master;
 GO
 
+-- Drop then create database
 IF EXISTS (SELECT 1 FROM sys.databases WHERE name='DataWareHouse')
 BEGIN
 	ALTER DATABASE DataWareHouse SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
@@ -18,17 +19,21 @@ BEGIN
 END;
 GO
 
+-- Create DataWareHouse database
 CREATE DATABASE DataWareHouse;
 GO
 
 USE DataWareHouse;
 GO
 
+-- Create bronze schema
 CREATE SCHEMA bronze;
 GO
 
+-- Create silver schema	
 CREATE SCHEMA silver;
 GO
 
+-- Create gold schema
 CREATE SCHEMA gold;
 GO
