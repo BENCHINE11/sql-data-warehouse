@@ -1,11 +1,15 @@
 /*
-	This script drops then cretaes a database with the name `DataWareHouse`
-	Then creates 3 schemas within it, `bronze`, `silver` and `gold` 
-*/
+===================================================================================
+Create Database and Schemas
+===================================================================================
+Script Purpose:
+	This script drops then creates a database with the name `DataWareHouse`. Additionally, the script
+	creates 3 schemas within the database, `bronze`, `silver` and `gold`.
 
-/* WARNING!
-	This script drops the database `DataWareHouse`, so if the database exists,
-	data within it will be permanently deleted
+WARNING!
+	Running this script drops the database `DataWareHouse` if the database exists.
+	All data within the data warehouse will be permanently deleted. Proceed with
+	caution, make sure you have a solid backup before running this script.
 */
 
 USE master;
